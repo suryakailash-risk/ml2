@@ -1,8 +1,5 @@
-Here’s a clean and professional **README.md** file for your youth drug use project using decision trees:
 
----
 
-```markdown
 # Exploring Youth Drug Use with Decision Trees
 
 ## Overview
