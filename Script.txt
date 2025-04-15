@@ -1,0 +1,75 @@
+Slide-1
+Hello everyone, thank you for joining me today. My name is Suryakailash Ramesh, and I’ll be presenting my project titled Exploring Youth Drug Use with Decision Trees. In this presentation, we’ll analyze factors influencing youth substance use and how machine learning models—especially decision trees—can help us understand and predict these behaviors.
+
+Slide-2
+This study explores three primary questions. First, can peer, school, or family factors help us predict whether a youth has tried alcohol? This is a binary classification problem with the ALCFLAG variable.
+Second, can we classify cigarette usage levels among youths as low, medium, or high? This is a multi-class classification problem using the IRCIGFM variable. And third, how many days per month does a youth smoke cigarettes? This is a regression problem where we use CIGMDAYS as the target.
+
+Slide-3
+The dataset used is from the 2020 National Survey on Drug Use and Health, focused on youth under 18. The selected features such as demographics, peer and parental influences, drug education, and various youth experiences. I relied on imputed variables where available and carefully handled missing data through cleaning and filtering.
+
+Slide-4
+Our modeling approach utilized decision trees, random forests, bagging, and boosting methods. We split data into training and testing sets, tuned hyperparameters using GridSearchCV, and evaluated model performance using accuracy for classification and RMSE for regression.
+
+
+Slide-6
+A decision tree is a flowchart that helps you visualize and compare different options. It is supervised learning algorithm, which is utilized for both classification and regression tasks. Advantages are easy to understand and flexible and Dis advantages are overfitting, greedy search.
+
+Slide-7
+These are the important variables that has influence over the cigarettes
+
+Slide-8
+To understand the tree which is very huge we have to identify which is the correct number of trees required for addition tree For that we use a concept called pruning to identify this graph helps us to understand at which node that is when we crop the node after 6 it is having a reasonable accuracy
+
+slide - 9
+I predicted whether a youth has tried cigarettes. Top features included peer disapproval, parental checks, and marijuana usage. The decision tree achieved 80% accuracy on training data and 78% on test data. This highlights the strong influence of peer and parental behavior.
+
+slide - 10
+This diagram represents the decision tree we built to predict whether a youth has used alcohol or not, based on the top 10 most important features. Think of it like a flowchart that asks a series of yes-or-no questions to reach a prediction.
+
+At the very top, the first question is about how much marijuana students believe their peers are using. This is the most influential factor. If students believe that most or all of their peers are using marijuana, the model is more likely to predict alcohol use.
+
+As we move down the tree, we see questions about peer disapproval, like ‘Would friends disapprove if the youth used marijuana monthly?’ and parental attitudes, like ‘Do parents discourage marijuana use?’. These factors also strongly influence whether the youth is likely to have used alcohol.
+
+For example, if a student believes few of their peers use marijuana and their friends and parents strongly discourage drug use, the model is more likely to predict no alcohol use.
+
+On the other hand, if peer drug use is perceived as common and there is less disapproval from friends and parents, the prediction shifts towards having used alcohol.
+
+This tree helps us interpret the relationships between youth perceptions, social influence, and substance use in a way that’s both visual and intuitive.
+
+Slide-11
+Random Forest builds multiple decision trees and combines their outputs to improve accuracy and control overfitting. The disadvantages are its hard to interpret and it takes more time to execute if the data is more the advantage is it is having higher accuracy and it does not do overfitting.
+
+Slide -12
+Comparing both decision tree and random forest we can see decision tree is having higher accuracy than random forest in this case.
+
+slide -13
+Genie index it is used to understand how pure the data has been loaded into the decision tree so that it doesn't give any biased outcomes for that we are using this formula 1 - summation of total impurities. Higher the impurity the more mixed data we have got and when it is very less it means it is more pure.
+
+slide - 15
+Multiclass classification in multiclass classification is a supervised learning problem the goal is to classify the input into 1 of 3 or more discrete classes so in our case we are considering classifying the type of cigarette use as low medium or high as our target variable in this the evaluation metrics are accuracy F1 score precision and recall.
+
+Slide - 16
+Gradient boosting gradient boosting is an assembly method learning technique that builds a strong predictive model by combining many weak learners in a sequential manner this uses the residual errors of the previous decision tree for the upcoming decision tree. Why it is called as gradient boosters it minimizes the loss function by gradient which it takes from the each learner in each step of the decent tree the advantage of this method is it has higher accuracy and it works with non linear data but the drawback is it's quite a bit slower and it also can overfit.
+
+
+Slide -17
+This is a demonstration of difference between boosting and bagging boosting is something that happens sequentially bagging is something that happens parallelly so each and every information of the errors and residual error calculation will be carried forward to each tree in boosting whereas in bagging the cumulative mean is taken for consideration.
+
+silde -18
+And grids search cv this is a library that has been used to identify which is the best parameter for the models we are using for this project to start with we have to define the model the grid that is like how much depth we want what are the splits we want to include like that information we have to include and let it run so that it can do cross validation with each and every combination and it will evaluate which is having a better performance which will give out which are the best parameters and with what is the best score for it.
+
+Slide -19
+For this multiclass classifier the steps that have been involved are first I filter the data set that includes only the predicted variables and the target variables in this I included initially all the variables in it then I did a evaluation to have samples size which is stable having equal variation and then I selected top 10 features out of this particular predictors and when for grid search that is hyperparameter tuning for all the three models which I have used the entry random forest and gradient boost.
+
+Slide -20
+So after running the gradient boost I can see the addition tree is having a maximum depth of 3 which is having a good accuracy of 0.31 as compared to other numbers in the grid search similarly for random phones it took depth of Phi and number of trees in the random forest as one hundred and for gradient boost it took learning at 0 .01 in what rate it should learn and the depth as one and the number of trees is 20 with which it is having accuracy similar to random forest 0.342.
+
+Slide -22
+For this third part the regression problem I have consider how many months that anger dills have been smoking so first I will start with voters regression regression is a type of supervised learning used when the target variable is continuous so in our case it is going to be the days his visit is zero or 123 or till 30 that is they are smoking every day we are going to find out.
+
+Slide -23
+The steps involved in this method are first clean the data set that is removing null values identifying which are not required data that is like 90 cities information and I am doing again grid search to understand which works better station tree regressor or random forest regressor or gradient boost regressor
+
+Slide -24
+Out of this regression model we understood decision C score R ^2 is 0.057 random 4 is 0.0138 and gradient goes to 0 .02 double zero looking into this we can understand the msc and mae also and as the graph shows gradient boost is performing better than random forest and dationary in this case
