@@ -3,7 +3,7 @@ Hello everyone, thank you for joining me today. My name is Suryakailash Ramesh, 
 
 Slide-2
 This study explores three primary questions. First, can peer, school, or family factors help us predict whether a youth has tried alcohol? This is a binary classification problem with the ALCFLAG variable.
-Second, can we classify cigarette usage levels among youths as low, medium, or high? This is a multi-class classification problem using the IRCIGFM variable. And third, how many days per month does a youth smoke cigarettes? This is a regression problem where we use CIGMDAYS as the target.
+Second, can I classify cigarette usage levels among youths as low, medium, or high? This is a multi-class classification problem using the IRCIGFM variable. And third, how many days per month does a youth smoke cigarettes? This is a regression problem where we use CIGMDAYS as the target.
 
 Slide-3
 The dataset used is from the 2020 National Survey on Drug Use and Health, focused on youth under 18. The selected features such as demographics, peer and parental influences, drug education, and various youth experiences. I relied on imputed variables where available and carefully handled missing data through cleaning and filtering.
@@ -73,3 +73,7 @@ The steps involved in this method are first clean the data set that is removing 
 
 Slide -24
 Out of this regression model we understood decision C score R ^2 is 0.057 random 4 is 0.0138 and gradient goes to 0 .02 double zero looking into this we can understand the msc and mae also and as the graph shows gradient boost is performing better than random forest and dationary in this case
+
+
+Slide - 25
+Out of these three models I have understood the following decent tree has a okesh accuracy as compared to random forest ingredient boost and for interpretability is dationary is best for it and speed also decision sees relationship decision tree has a more than random forest and gradient boost when it comes to over fitting Decision tree has more chances of having overfit happening in it where random forest does not have that issue but gradient boost sometimes thus overfitting and tuning needed is decentry doesn't need much of tuning except the pruning higher than that random forest in gradient boost has more changes as compared to density.
