@@ -68,7 +68,7 @@ The project aims to answer the following research questions:
 
 ## Author
 **Suryakailash Ramesh**  
-Graduate Student, University at Buffalo  
+Graduate Student, Seattle University  
 Email:
 LinkedIn:
 ---
@@ -77,7 +77,3 @@ LinkedIn:
 - NSDUH Public Use Data Files – SAMHSA
 - U.S. Department of Health and Human Services
 ```
-
----
-
-Let me know if you'd like this exported to a `.md` file or if you want a version tailored for GitHub portfolio display.
