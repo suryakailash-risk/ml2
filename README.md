@@ -21,7 +21,7 @@ The project aims to answer the following research questions:
    _Target: `CIGMDAYS`_
 
 ## Dataset
-- **Source:** [NSDUH 2020 Public Use File](https://www.datafiles.samhsa.gov/)
+- **Source:** [NSDUH 2020 Public Use File](https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/datafiles/2020)
 - **Filtered Sample:** Youths under age 18
 - **Features:** Demographics, peer disapproval, parental monitoring, drug education, youth experiences, and more
 
@@ -75,5 +75,4 @@ LinkedIn:
 
 ## Acknowledgments
 - NSDUH Public Use Data Files – SAMHSA
-- U.S. Department of Health and Human Services
 ```
